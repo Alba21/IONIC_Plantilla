@@ -9,13 +9,13 @@ En la parte superior derecha, en el botón de **Clone or Download** y selecciona
 Después de descomprimir el archivo, desde la carpeta app, en la Terminal corren el comando de npm install, para que les agregue todas las librerias para que el proyecto funcione. 
 
 ```
-C://IONIC_Plantilla/app> npm install
+C:/IONIC_Plantilla/app> npm install
 ```
 
 Cuando haya terminado de instalar las librerias, corren el comando ionic serve
 
 ```
-C://IONIC_Plantilla/app> ionic serve
+C:/IONIC_Plantilla/app> ionic serve
 ```
 
 Les correra la aplicación y veran la siguiente pantalla:
@@ -23,11 +23,10 @@ Les correra la aplicación y veran la siguiente pantalla:
 
 El proyecto *NO* está conectado a un backend. Unicamente es una muestra de las plantillas que pueden utilizar, por lo que el registro no es funcional. Para fines del ejemplo solo funciona el login, para ver los diferentes menus deben colocar de contraseña:
 
-
-  -estudiante
-  -profesor
-  -padre
-  -admin
+* estudiante
+* profesor
+* padre
+* admin
 
 Mock-ups de las paginas de la aplicación:
 
