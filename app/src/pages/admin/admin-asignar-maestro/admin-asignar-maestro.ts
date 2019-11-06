@@ -18,7 +18,15 @@ import { FormBuilder, FormGroup, Validators } from '../../../../node_modules/@an
 export class AdminAsignarMaestroPage {
 
   myForm: FormGroup;  
-  lista_catedraticos : any [];
+  lista_catedraticos : any[] = [{
+    idCatedratico : 1,
+    Nombre: "Ing 1"
+  },
+  {
+    idCatedratico : 2,
+    Nombre: "Ing 2"
+  }];
+
   lista_cursos : any [];
 
   constructor(public navCtrl: NavController,public alerCtrl: AlertController, public formBuilder: FormBuilder, public http: HttpProvider) {

@@ -33,6 +33,7 @@ import { AdminVerMaestrosPage } from '../pages/admin/admin-ver-maestros/admin-ve
 import { EstudianteVerNotasOrdenPageModule } from '../pages/estudiante/estudiante-ver-notas-orden/estudiante-ver-notas-orden.module';
 import { EstudianteVerNotasOrdenPage } from '../pages/estudiante/estudiante-ver-notas-orden/estudiante-ver-notas-orden';
 import { AdminAsignarMaestroPage } from '../pages/admin/admin-asignar-maestro/admin-asignar-maestro';
+import { AdminVerNotasPorCursoPage } from '../pages/admin/admin-ver-notas-por-curso/admin-ver-notas-por-curso';
 
 
 
@@ -62,7 +63,8 @@ import { AdminAsignarMaestroPage } from '../pages/admin/admin-asignar-maestro/ad
     EstudianteVerNotasPage,
     AdminVerMaestrosPage,
     EstudianteVerNotasOrdenPage,
-    AdminAsignarMaestroPage
+    AdminAsignarMaestroPage,
+    AdminVerNotasPorCursoPage
   ],
   imports: [
     BrowserModule,
@@ -95,7 +97,8 @@ import { AdminAsignarMaestroPage } from '../pages/admin/admin-asignar-maestro/ad
     EstudianteVerNotasPage,
     AdminVerMaestrosPage,
     EstudianteVerNotasOrdenPage,
-    AdminAsignarMaestroPage
+    AdminAsignarMaestroPage,
+    AdminVerNotasPorCursoPage
   ],
   providers: [
     StatusBar,

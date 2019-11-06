@@ -18,7 +18,14 @@ import { HttpProvider } from '../../../providers/http/http';
 
 export class AdminVerMaestrosPage {
 
-  lista_maestros : any[];
+  lista_maestros : any[] = [{
+    idCatedratico : 1,
+    Nombre: "Ing 1"
+  },
+  {
+    idCatedratico : 2,
+    Nombre: "Ing 2"
+  }];
 
   constructor(public navCtrl: NavController , public navParams: NavParams,public http: HttpProvider,public alerCtrl: AlertController) {
     this.listar_maestros();

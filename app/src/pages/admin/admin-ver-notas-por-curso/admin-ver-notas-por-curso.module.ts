@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { AdminVerNotasPorCursoPage } from './admin-ver-notas-por-curso';
-
 @NgModule({
   declarations: [
     AdminVerNotasPorCursoPage,
@@ -10,4 +9,6 @@ import { AdminVerNotasPorCursoPage } from './admin-ver-notas-por-curso';
     IonicPageModule.forChild(AdminVerNotasPorCursoPage),
   ],
 })
-export class AdminVerNotasPorCursoPageModule {}
+export class AdminVerNotasPorCursoPageModule {
+  
+}
