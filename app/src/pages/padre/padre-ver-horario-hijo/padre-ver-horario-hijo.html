@@ -1,0 +1,46 @@
+<ion-header >
+  <ion-navbar color="dark">
+    <ion-navbar>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Listado de Hijos
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="listar_hijos()">
+          <ion-icon name="md-refresh"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-navbar>   
+</ion-header>
+
+
+
+<ion-content class="login-content" padding>
+  
+  <ion-fab bottom right >
+    <button ion-fab (click)="nueva_nota()">
+      <ion-icon name="md-add">
+      </ion-icon>
+    </button>
+  </ion-fab>
+
+
+  <ion-list >        
+
+      <button ion-item *ngFor="let item of lista_hijos"  class="button button4" (click)="DetalleHijo(item)"  icon-start>
+        
+        <ion-card-content>
+            <h4  style="font-size: 20px; font-weight:bold ">  {{ item.nombre }} </h4>
+        </ion-card-content>
+
+      </button>
+
+  </ion-list>
+
+
+
+
+</ion-content>

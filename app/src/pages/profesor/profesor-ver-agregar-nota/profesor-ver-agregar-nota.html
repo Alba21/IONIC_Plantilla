@@ -1,0 +1,57 @@
+<ion-header >
+   <ion-navbar color="dark">
+      <ion-navbar>
+         <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+         </button>
+         <ion-title>
+            Agregar Registro de Nota
+         </ion-title>
+      </ion-navbar>
+   </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content class="login-content" padding>
+
+
+  <ion-card>
+    
+    <form [formGroup]="myForm" (ngSubmit)="agregar_nota()">
+      <ion-list>
+
+
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>          
+          <ion-label>Alumno</ion-label>
+          <ion-select  formControlName="alumno">
+            <ion-option ion-item *ngFor="let item of lista_estudiante"  value="{{item.idEstudiante}}">{{item.Nombre}}</ion-option>                       
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>          
+          <ion-label>Curso</ion-label>
+          <ion-select  formControlName="curso">
+            <ion-option ion-item *ngFor="let item of lista_cursos"  value="{{item.idCurso}}">{{item.Nombre}}</ion-option>                       
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="md-podium" item-start></ion-icon>
+          <ion-label stacked>Nota:</ion-label>
+          <ion-input formControlName="nota" type="number"></ion-input>
+        </ion-item>    
+
+
+      </ion-list>
+      <div padding>
+        <button ion-button block type="submit" [disabled]="!myForm.valid" >Ingresar</button>
+      </div>
+    </form>
+  </ion-card>  
+
+
+</ion-content>

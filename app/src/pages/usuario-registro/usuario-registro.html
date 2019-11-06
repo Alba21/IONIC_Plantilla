@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>USAC - LEARN</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login-content" padding>
+
+  <ion-card>  
+    <form [formGroup]="myForm" (ngSubmit)="UsuarioCrear()">
+      <ion-list>
+
+
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>
+          <ion-label stacked>Nombre del usuario:</ion-label>
+          <ion-input formControlName="usuario_nombre" type="text" placeholder="Nombre del usuario"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>
+          <ion-label stacked>Correo Usuario:</ion-label>
+          <ion-input formControlName="usuario_apellido" type="email" placeholder="correo"></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>          
+          <ion-label>Tipo Usuario</ion-label>
+          <ion-select formControlName="tipo_usuario">
+            <ion-option value="1">Profesor</ion-option>
+            <ion-option value="2">Padre</ion-option>  
+            <ion-option value="3">Estudiante</ion-option>          
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="md-key" item-start></ion-icon>
+          <ion-label stacked>Contrasena:</ion-label>
+          <ion-input formControlName="usuario_contrasena" type="password"></ion-input>
+        </ion-item>      
+      </ion-list>
+      <div padding>
+        <button ion-button block type="submit" [disabled]="!myForm.valid">Registrarse</button>
+      </div>
+    </form>
+  </ion-card>    
+
+
+
+
+  <ion-card>
+    
+    <form [formGroup]="myFormLogin" (ngSubmit)="usuarioLogin()">
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>
+          <ion-label stacked>Correo del usuario:</ion-label>
+          <ion-input formControlName="usuario_nombre" type="email" placeholder="correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="md-key" item-start></ion-icon>
+          <ion-label stacked>Contrasena:</ion-label>
+          <ion-input formControlName="usuario_contrasena" type="password"></ion-input>
+        </ion-item>      
+      </ion-list>
+      <div padding>
+        <button ion-button block type="submit" [disabled]="!myFormLogin.valid" >Ingresar</button>
+      </div>
+    </form>
+  </ion-card>  
+
+
+
+</ion-content>

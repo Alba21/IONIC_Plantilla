@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ProfesorVerActividadesCursoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Actividades del Curso: </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list ion-item *ngFor="let item of lista_notas">
+    <ion-item>
+       <ion-icon name="md-key" item-start large ></ion-icon>
+       <h2>Titulo</h2>
+       <p>{{item.Nombre}}</p>
+    </ion-item>
+    <ion-item>
+       <ion-icon name="md-person" item-start large></ion-icon>
+       <h2>Descripcion</h2>
+       <p>{{item.Descripcion}}</p>
+    </ion-item>
+    <ion-item>
+       <ion-icon name="md-person" item-start large></ion-icon>
+       <h2>Fecha</h2>
+       <p>{{item.Fecha}}</p>
+    </ion-item>
+</ion-list>
+</ion-content>

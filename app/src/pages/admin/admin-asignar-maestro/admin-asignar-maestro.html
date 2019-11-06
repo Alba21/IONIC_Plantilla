@@ -1,0 +1,50 @@
+<ion-header >
+  <ion-navbar color="dark">
+     <ion-navbar>
+        <button ion-button icon-only menuToggle>
+           <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+          Asignar Curso
+        </ion-title>
+     </ion-navbar>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content class="login-content" padding>
+
+
+ <ion-card>
+   
+   <form [formGroup]="myForm" (ngSubmit)="asignar_catedratico()">
+     <ion-list>
+
+
+       <ion-item>
+         <ion-icon name="person" item-start></ion-icon>          
+         <ion-label>Profesor</ion-label>
+         <ion-select  formControlName="catedratico">
+           <ion-option ion-item *ngFor="let item of lista_catedraticos"  value="{{item.idCatedratico}}">{{item.Nombre}}</ion-option>                       
+         </ion-select>
+       </ion-item>
+
+       <ion-item>
+         <ion-icon name="person" item-start></ion-icon>          
+         <ion-label>Curso</ion-label>
+         <ion-select  formControlName="curso">
+           <ion-option ion-item *ngFor="let item of lista_cursos"  value="{{item.idCurso}}">{{item.Nombre}}</ion-option>                       
+         </ion-select>
+       </ion-item>
+
+     </ion-list>
+     <div padding>
+       <button ion-button block type="submit" [disabled]="!myForm.valid" >Ingresar</button>
+     </div>
+   </form>
+ </ion-card>  
+
+
+</ion-content>

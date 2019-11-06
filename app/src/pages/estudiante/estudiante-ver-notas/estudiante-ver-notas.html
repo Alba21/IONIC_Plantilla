@@ -1,0 +1,43 @@
+<ion-header >
+   <ion-navbar color="dark">
+      <ion-navbar>
+         <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+         </button>
+         <ion-title>
+            Mis notas
+         </ion-title>
+         <ion-buttons end>
+            <button ion-button icon-only (click)="listar_notas()">
+               <ion-icon name="md-refresh"></ion-icon>
+            </button>
+         </ion-buttons>
+      </ion-navbar>
+   </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="login-content" padding>
+
+  <ion-fab bottom right >
+    <button ion-fab (click)="nueva_nota()">
+      <ion-icon name="md-add">
+      </ion-icon>
+    </button>
+  </ion-fab>
+
+   <ion-list ion-item *ngFor="let item of lista_notas_estudiante">
+         <ion-item>
+            <ion-icon name="md-person" item-start large></ion-icon>
+            <h2>Curso</h2>
+            <p>{{item.Nombre}}</p>
+         </ion-item>
+         <ion-item>
+            <ion-icon name="md-list-box" item-start large></ion-icon>
+            <h2>Nota</h2>
+            <p>{{item.Nota}}</p>
+         </ion-item>
+   </ion-list>
+
+</ion-content>
